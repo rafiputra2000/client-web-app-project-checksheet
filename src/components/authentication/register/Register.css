@@ -1,0 +1,16 @@
+.box__Register{
+    font-family: 'Roboto', sans-serif;
+}
+
+.box__Register .card_img{
+    display:flex;
+    justify-content:center;
+}
+
+.box__Register .card_box{
+    box-shadow: 0 3px 3px 3px hsl(245, 75%, 52%, 0.25);
+}
+
+.box__Register .btn-primary{
+    background-color: #3b97d3
+}

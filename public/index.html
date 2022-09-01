@@ -1,43 +1,184 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#000000" />
-    <meta
-      name="description"
-      content="Web site created using create-react-app"
-    />
-    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
-    <!--
-      manifest.json provides metadata used when your web app is installed on a
-      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
-    -->
-    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-    <!--
-      Notice the use of %PUBLIC_URL% in the tags above.
-      It will be replaced with the URL of the `public` folder during the build.
-      Only files inside the `public` folder can be referenced from the HTML.
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/styles.css">
+   <!-- CSS only -->
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!-- Bootstrap CSS -->
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Silkscreen&display=swap" rel="stylesheet">
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
 
-      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
-      work correctly both with client-side routing and a non-root public URL.
-      Learn how to configure a non-root public URL by running `npm run build`.
-    -->
-    <title>React App</title>
-  </head>
-  <body>
-    <noscript>You need to enable JavaScript to run this app.</noscript>
-    <div id="root"></div>
-    <!--
-      This HTML file is a template.
-      If you open it directly in the browser, you will see an empty page.
+  <!-- Bootstrap DataTable -->
+<!-- <link rel="stylesheet" href="https://cdn.datatables.net/1.10.16/css/dataTables.bootstrap.min.css"> -->
+<!-- Bootstrap ExportDataTable -->
+<!-- <link rel="stylesheet" href="https://cdn.datatables.net/buttons/1.5.0/css/buttons.bootstrap.min.css"> -->
+<!-- Font icons -->
+<!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"> -->
 
-      You can add webfonts, meta tags, or analytics to this file.
-      The build step will place the bundled scripts into the <body> tag.
+<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/bs4/jszip-2.5.0/dt-1.10.20/b-1.6.1/b-colvis-1.6.1/b-html5-1.6.1/b-print-1.6.1/r-2.2.3/datatables.min.css" />
 
-      To begin the development, run `npm start` or `yarn start`.
-      To create a production bundle, use `npm run build` or `yarn build`.
-    -->
-  </body>
+
+  <title>My Dashboard</title>
+</head>
+<body>
+  <div id="root"></div>
+
+
+  <!-- jQuery -->
+<!-- <script type="text/javascript" src="https://code.jquery.com/jquery-1.12.4.js"></script> -->
+<!-- DataTables JS -->
+<!-- <script src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
+<script src="https://cdn.datatables.net/1.10.16/js/dataTables.bootstrap.min.js"></script> -->
+<!--  ExportDataTable JS -->
+<!-- <script src="https://cdn.datatables.net/buttons/1.5.0/js/dataTables.buttons.min.js"></script>
+<script src="https://cdn.datatables.net/buttons/1.5.0/js/buttons.bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.1.3/jszip.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.32/pdfmake.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.32/vfs_fonts.js"></script>
+<script src="https://cdn.datatables.net/buttons/1.5.0/js/buttons.html5.min.js"></script>
+<script src="https://cdn.datatables.net/buttons/1.5.0/js/buttons.print.min.js"></script>
+<script src="https://cdn.datatables.net/buttons/1.5.0/js/buttons.colVis.min.js"></script> -->
+<!-- Bootstrap JS -->
+<!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> -->
+
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.36/pdfmake.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.36/vfs_fonts.js"></script>
+<script type="text/javascript" src="https://cdn.datatables.net/v/bs4/jszip-2.5.0/dt-1.10.20/b-1.6.1/b-colvis-1.6.1/b-html5-1.6.1/b-print-1.6.1/r-2.2.3/datatables.min.js"></script>
+
+  
+  <script src="time.js"></script>
+  <script type="text/javascript">
+  $(document).ready(function() {
+            $('#table_wholedashboard').DataTable({
+                dom: 'Bfrtip',
+                responsive: true,
+                pageLength: 25,
+                // lengthMenu: [0, 5, 10, 20, 50, 100, 200, 500],
+        
+                buttons: [
+                    'copy', 'csv', 'excel', 'pdf', 'print'
+                ]
+        
+            });
+        });
+  </script>
+   <script type="text/javascript">
+    $(document).ready(function() {
+              $('#table_handover').DataTable({
+                  dom: 'Bfrtip',
+                  responsive: true,
+                  pageLength: 25,
+                  // lengthMenu: [0, 5, 10, 20, 50, 100, 200, 500],
+          
+                  buttons: [
+                      'copy', 'csv', 'excel', 'pdf', 'print'
+                  ]
+          
+              });
+          });
+    </script>
+    <script type="text/javascript">
+      $(document).ready(function() {
+                $('#table_initialshiftinspection').DataTable({
+                    dom: 'Bfrtip',
+                    responsive: true,
+                    pageLength: 25,
+                    // lengthMenu: [0, 5, 10, 20, 50, 100, 200, 500],
+            
+                    buttons: [
+                        'copy', 'csv', 'excel', 'pdf', 'print'
+                    ]
+            
+                });
+            });
+      </script>
+      <script type="text/javascript">
+        $(document).ready(function() {
+                  $('#table_production_parameters').DataTable({
+                      dom: 'Bfrtip',
+                      responsive: true,
+                      pageLength: 25,
+                      // lengthMenu: [0, 5, 10, 20, 50, 100, 200, 500],
+              
+                      buttons: [
+                          'copy', 'csv', 'excel', 'pdf', 'print'
+                      ]
+              
+                  });
+              });
+        </script>
+        <script type="text/javascript">
+          $(document).ready(function() {
+                    $('#table_materials').DataTable({
+                        dom: 'Bfrtip',
+                        responsive: true,
+                        pageLength: 25,
+                        // lengthMenu: [0, 5, 10, 20, 50, 100, 200, 500],
+                
+                        buttons: [
+                            'copy', 'csv', 'excel', 'pdf', 'print'
+                        ]
+                
+                    });
+                });
+          </script>
+          <script type="text/javascript">
+            $(document).ready(function() {
+                      $('#table_production_result').DataTable({
+                          dom: 'Bfrtip',
+                          responsive: true,
+                          pageLength: 25,
+                          // lengthMenu: [0, 5, 10, 20, 50, 100, 200, 500],
+                  
+                          buttons: [
+                              'copy', 'csv', 'excel', 'pdf', 'print'
+                          ]
+                  
+                      });
+                  });
+            </script>
+            <script type="text/javascript">
+              $(document).ready(function() {
+                        $('#table_imd_reject').DataTable({
+                            dom: 'Bfrtip',
+                            responsive: true,
+                            pageLength: 25,
+                            // lengthMenu: [0, 5, 10, 20, 50, 100, 200, 500],
+                    
+                            buttons: [
+                                'copy', 'csv', 'excel', 'pdf', 'print'
+                            ]
+                    
+                        });
+                    });
+              </script>
+               <script type="text/javascript">
+                $(document).ready(function() {
+                          $('#table_report').DataTable({
+                              dom: 'Bfrtip',
+                              responsive: true,
+                              pageLength: 25,
+                              // lengthMenu: [0, 5, 10, 20, 50, 100, 200, 500],
+                      
+                              buttons: [
+                                  'copy', 'csv', 'excel', 'pdf', 'print'
+                              ]
+                      
+                          });
+                      });
+                </script>
+</body>
 </html>
